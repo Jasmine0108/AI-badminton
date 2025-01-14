@@ -1,0 +1,7 @@
+.env
+
+badminton-venv/
+models/
+data/folder_processed/
+data/processed/
+data/grade_and_comment_separate.json
