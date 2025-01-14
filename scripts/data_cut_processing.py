@@ -10,7 +10,7 @@ def store_csv_file(data, timestamps, file_name):
         file_path = os.path.join(file_name + '_' + str(count) + '.csv')
         with open('../data/processed/' + file_path, 'w', newline='') as csvfile:
             writer = csv.writer(csvfile, delimiter=',')
-            for t in range(int(timestamp / 10) - 50, int(timestamp / 10) + 75): #-75,+25
+            for t in range(int(timestamp / 10) - 50, int(timestamp / 10) + 75):
                 writer.writerow(data[t][:])
             count += 1
 
@@ -58,5 +58,5 @@ for file_name in os.listdir(folder_path):
             time += 1
         print(file_name,count)
         #print(timestamps) 
-        #store_csv_file(data, timestamps, file_name)
+        store_csv_file(data, timestamps, file_name)
        
